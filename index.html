@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>For Kopal ❤️</title>
+<title>For My Sweetheart ❤️</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -18,58 +18,58 @@ body {
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, #ff758c, #ff7eb3);
-    transition: background 1s ease;
+    transition: background 1.2s ease;
     overflow: hidden;
 }
 
 /* Card */
 .card {
-    background: white;
-    padding: 32px 28px;
-    border-radius: 22px;
+    background: rgba(255,255,255,0.97);
+    padding: 34px 30px;
+    border-radius: 24px;
     text-align: center;
     width: 90%;
-    max-width: 380px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-    animation: fadeUp 0.6s ease;
+    max-width: 390px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.28);
+    animation: fadeUp 0.7s ease;
 }
 
 @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(18px); }
+    from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 h2 {
-    color: #ff4d6d;
-    font-size: 22px;
+    color: #ff3b5c;
+    font-size: 23px;
     margin-bottom: 14px;
 }
 
 p {
     color: #444;
-    font-size: 15.5px;
-    line-height: 1.6;
-    margin-bottom: 26px;
+    font-size: 15.8px;
+    line-height: 1.65;
+    margin-bottom: 28px;
 }
 
 /* Buttons */
 .buttons {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
 }
 
 button {
     border: none;
     padding: 14px;
-    border-radius: 30px;
+    border-radius: 32px;
     font-size: 15.5px;
     cursor: pointer;
     transition: 0.25s;
 }
 
 .primary {
-    background: #ff4d6d;
+    background: linear-gradient(135deg, #ff4d6d, #ff1f4a);
     color: white;
 }
 
@@ -79,7 +79,7 @@ button {
 }
 
 button:hover {
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 
 /* Romantic final background */
@@ -91,13 +91,13 @@ button:hover {
 .heart {
     position: absolute;
     bottom: -20px;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255,255,255,0.95);
     animation: float linear infinite;
 }
 
 @keyframes float {
     to {
-        transform: translateY(-120vh);
+        transform: translateY(-120vh) scale(1.3);
         opacity: 0;
     }
 }
@@ -141,8 +141,10 @@ button:hover {
 <div class="popup" id="popup">
     <div class="popup-box">
         <h2>Oops 😏</h2>
-        <p>No — ab aap mere dil mein phas gaye ho ❤️<br><br>
-        Nice try though 😉</p>
+        <p>
+            No — ab aap mere dil mein phas gaye ho ❤️<br><br>
+            There’s no escape now 😉
+        </p>
         <button class="primary" onclick="closePopup()">Okay 😄</button>
     </div>
 </div>
@@ -152,39 +154,39 @@ let step = 0;
 
 const slides = [
     {
-        title: "Hey Kopal 👋",
-        text: "Just a quick question for my favorite person.",
+        title: "Hey sweetheart 💖",
+        text: "Just a quick question for my favorite person — my Goluss 🥰",
         options: [
-            { text: "I’m listening 😊", next: true }
+            { text: "I’m listening 😌", next: true }
         ]
     },
     {
-        title: "Be honest 😌",
+        title: "Be honest cutu babu 😏",
         text: "After all this time… do I still make you smile?",
         options: [
-            { text: "Obviously ❤️", next: true },
+            { text: "Always ❤️", next: true },
             { text: "Sometimes 🙄", next: false }
         ]
     },
     {
-        title: "Good to know 😉",
+        title: "Tell me babyyyy 💕",
         text: "Do you realize how special you are to me?",
         options: [
-            { text: "I do 💕", next: true },
-            { text: "Not really 🤔", next: false }
+            { text: "I do 😍", next: true },
+            { text: "Maybe 🤔", next: false }
         ]
     },
     {
-        title: "One last thing",
-        text: "Will you be my Valentine — again?",
+        title: "One last thing my sweetheart 💞",
+        text: "WILL YOU BE MY VALENTINE, BABY?",
         options: [
-            { text: "Always ❤️", next: true },
-            { text: "Let me think 😏", next: false }
+            { text: "Forever ❤️", next: true },
+            { text: "Let me tease you 😏", next: false }
         ]
     },
     {
         title: "❤️",
-        text: "I knew it. Happy Valentine’s Day, my love.",
+        text: "I LOVE YOU SO MUCH, GOLU 💖",
         options: []
     }
 ];
@@ -207,7 +209,7 @@ function renderSlide() {
 
     if (step === slides.length - 1) {
         document.body.classList.add("romantic");
-        createHearts();
+        createHearts(45);
     }
 }
 
@@ -224,17 +226,17 @@ function closePopup() {
     document.getElementById("popup").style.display = "none";
 }
 
-function createHearts() {
-    for (let i = 0; i < 30; i++) {
+function createHearts(count) {
+    for (let i = 0; i < count; i++) {
         let heart = document.createElement("div");
         heart.className = "heart";
         heart.innerHTML = "❤";
         heart.style.left = Math.random() * 100 + "vw";
-        heart.style.fontSize = (16 + Math.random() * 20) + "px";
+        heart.style.fontSize = (18 + Math.random() * 24) + "px";
         heart.style.animationDuration = (4 + Math.random() * 4) + "s";
         document.body.appendChild(heart);
 
-        setTimeout(() => heart.remove(), 7000);
+        setTimeout(() => heart.remove(), 8000);
     }
 }
 
